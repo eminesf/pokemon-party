@@ -12,6 +12,8 @@ export class PokemonsService {
   constructor(private httpService: HttpService) {}
 
   findAllPokemons(): Observable<AxiosResponse<Pokemon[]>> {
+    console.log('teste');
+
     return this.httpService.get(`${baseUrl}/pokemon?limit=151&offset=0`);
   }
 }
